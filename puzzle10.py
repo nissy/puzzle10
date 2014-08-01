@@ -11,14 +11,13 @@ def main():
     four_operator = ["*", "/", "+", "-"]
     str_operator = ["%s%s%s%s%s%s%s", "((%s%s%s)%s%s)%s%s", "(%s%s(%s%s%s))%s%s", "(%s%s%s)%s(%s%s%s)", "%s%s((%s%s%s)%s%s)", "%s%s(%s%s(%s%s%s))"]
 
-    for i in [(str(a), x, str(b), y, str(c), z, str(d)) for a in num for x in four_operator for b in num for y in four_operator for c in num for z in four_operator for d in num]:
-        for ii in str_operator:
-            formula = ii % i
-            try:
-                if eval(formula) == answer:
-                    print formula + "=" + str(answer)
-            except ZeroDivisionError:
-                pass
+    for formula in [zz % (str(a), x, str(b), y, str(c), z, str(d)) for a in num for x in four_operator for b in num for y in four_operator for c in num for z in four_operator for d in num for zz in str_operator]:
+        try:
+            if eval(formula) == answer:
+                print formula + "=" + str(answer)
+        except ZeroDivisionError:
+            pass
+
     return 0
 
 if __name__ == "__main__":
