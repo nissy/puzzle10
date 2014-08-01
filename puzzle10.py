@@ -6,13 +6,14 @@ import sys
 
 def main():
 
+    answer = 10
     num = range(1, 10)
     four_operator = ["*", "/", "+", "-"]
 
     for i in [(str(a), x, str(b), y, str(c), z, str(d)) for a in num for x in four_operator for b in num for y in four_operator for c in num for z in four_operator for d in num]:
         formula = "".join(i)
-        if eval(formula) == 10:
-            print formula + "=10"
+        if eval(formula) == answer:
+            print formula + "=" + str(answer)
 
     return 0
 
