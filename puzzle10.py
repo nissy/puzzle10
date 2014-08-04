@@ -7,7 +7,7 @@ import sys
 def main():
 
     answer = 10
-    num = range(1, 10)
+    num = range(0, 10)
     four_operator = ["*", "/", "+", "-"]
     str_operator = ["%s%s%s%s%s%s%s", "((%s%s%s)%s%s)%s%s", "(%s%s(%s%s%s))%s%s", "(%s%s%s)%s(%s%s%s)", "%s%s((%s%s%s)%s%s)", "%s%s(%s%s(%s%s%s))"]
 
