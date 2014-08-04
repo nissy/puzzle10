@@ -9,7 +9,7 @@ def main():
     answer = 10
     num = range(0, 10)
     four_operator = ["*", "/", "+", "-"]
-    str_operator = ["%s%s%s%s%s%s%s", "((%s%s%s)%s%s)%s%s", "(%s%s(%s%s%s))%s%s", "(%s%s%s)%s(%s%s%s)", "%s%s((%s%s%s)%s%s)", "%s%s(%s%s(%s%s%s))"]
+    str_operator = ["((%s%s%s)%s%s)%s%s", "(%s%s(%s%s%s))%s%s", "(%s%s%s)%s(%s%s%s)", "%s%s((%s%s%s)%s%s)", "%s%s(%s%s(%s%s%s))"]
 
     for formula in [zz % (str(a), x, str(b), y, str(c), z, str(d)) for a in num for x in four_operator for b in num for y in four_operator for c in num for z in four_operator for d in num for zz in str_operator]:
         try:
